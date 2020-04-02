@@ -769,6 +769,237 @@ div.tabla-precio ul li:before
 	color: #fe4918;
 	border: 2px solid #fe4918;
 }
+
+
+/*Mapa*/
+div.mapa
+{
+	height: 420px;
+	background-color: green;
+}
+
+
+/*Testimoniales*/
+
+div.testimoniales
+{
+	padding-bottom: 20px;
+}
+
+div.testimonial
+{
+	padding: 5px;
+}
+
+@media only screen and (min-width:768px)
+{
+	div.testimonial
+	{
+		float: left;
+		width: 33.33%;
+	}
+}
+
+blockquote
+{
+	background-color: white;
+	border: 1px solid #e1e1e1;
+	position: relative;
+	margin: 0 0 10px 0;
+}
+
+blockquote p 
+{
+	text-align: justify !important;
+	font-size: 1em !important;
+	font-family: 'PT Sans', sans-serif;
+	padding: 0 20px 0 65px;
+	
+}
+
+blockquote p::before
+{
+	content: '\201c';
+	position: absolute;
+	left: 13px;
+	top:  8px;
+	font-size: 8rem;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: #fe4918;
+}
+
+footer.info-testimonial
+{
+	padding: 0;
+}
+
+footer.info-testimonial img
+{
+	float: left;
+	width: 20%;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+
+footer.info-testimonial cite
+{
+	text-align: left;
+	color: #fe4918;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding-top: 20px;
+	width: 66.66%;
+	float: right;
+	font-weight: bold;
+	font-style: normal;
+}
+
+footer.info-testimonial span
+{
+	color: #000;
+	display: block;
+	text-transform: none;
+	margin: 5px 0 0 0;
+}
+
+/*newletter*/
+
+div.newletter
+{
+	position: relative;
+	height: auto;
+}
+
+div.newletter::before
+{
+	background-image: url("../img/bg-newsletter.jpg");
+	content: '';
+}
+
+div.newletter .contenido
+{
+	padding: 100px 0;
+	color: #fff;
+	text-align: center;
+	position: relative;
+}
+
+
+div.newletter .contenido p
+{
+	font-size: 1.2em;
+	text-transform: lowercase;
+}
+
+div.newletter .contenido h3
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 7vw;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.button.transparente
+{
+	background-color: transparent;
+	border: 2px solid #fff;
+}
+
+
+.button.transparente:hover
+{
+	border: 2px solid #fe4918;
+	background: #fe4918;
+}
+
+/*Cuenta Regresiva*/
+
+div.cuenta-regresiva ul li
+{
+	text-transform:  uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2rem;
+	text-align: center;
+}
+
+@media only screen and (min-width:768px)
+{
+	div.cuenta-regresiva ul li
+	{
+		width: 25%;
+		float: left;
+	}
+}
+
+
+/*Footer Pagina*/
+
+
+footer
+{
+	background-color: #353535;
+	padding-top: 40px;
+	margin-top: 20px;
+}
+
+footer div.contenedor > div
+{
+	color: #fff;
+	padding: 0 20px;
+	font-size: 12px;
+}
+
+
+@media only screen and (min-width:768px)
+{
+	footer div.contenedor > div
+	{
+		width: 33.33%;
+		float: left;
+	}
+}
+
+footer h3 
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 20px;
+}
+
+footer h3 span
+{
+	color: #fe4819;
+}
+
+footer.ultimos-twets
+{
+	margin-bottom: 10px;
+}
+
+footer nav.redes-sociales
+{
+	text-align: left;
+}
+
+
+
+footer p.copy
+{
+	background-color: #2e2e2e;
+	padding: 10px 0;
+	color: #fff;
+	text-align: center;
+	margin: 20px 0;
+}
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
