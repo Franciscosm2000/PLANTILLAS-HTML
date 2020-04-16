@@ -497,7 +497,6 @@ nav.menu-programa
 {
 	width: 100%;
 	border-bottom: 1px solid #fe4948;
-	padding-bottom: 10px;
 }
 
 nav.menu-programa a 
@@ -507,8 +506,27 @@ nav.menu-programa a
 	color: #000000;
 	text-decoration: none;
 	font-family: 'Oswald', sans-serif;
-	margin-bottom: 10px;
 	font-size: 1.2em;
+	position: relative;
+	margin-bottom: 10px;
+	width: 180px;
+}
+
+nav.menu-programa a.activo::after
+{
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	width: 30px;
+	background-image: url("../img/talleres-flecha.jpg");
+	bottom: -20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
 }
 
 @media only screen and (min-width:768px)
@@ -828,6 +846,7 @@ blockquote p::before
 	line-height: 1;
 	color: #fe4918;
 }
+
 
 footer.info-testimonial
 {

@@ -3,12 +3,12 @@
  "use strict";
 
 	
-	
+	 
   var regalo = document.getElementById('regalo');
  
   document.addEventListener('DOMContentLoaded',function()
 	{
-	
+	/*
 	var map = L.map('mapa').setView([12.179762, 273.904181], 20);
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -19,7 +19,7 @@
 		.bindPopup('GDLWebCamp.')
 		.openPopup();
 	  
-	 	 
+	 */	 
 	 //Datos Usuarios
 	 var nombre = document.getElementById('nombre');
 	 
@@ -197,3 +197,50 @@
 	}); //DomContentLoreaded
  
  })();
+
+
+
+$(function()
+{
+	//programa de conferencia
+	$('div.ocultar').hide();
+	
+	$('.programa-evento .info-curso:first').show();
+	
+	$('.menu-programa a:first').addClass('activo');
+	
+	$('.menu-programa a').on('click',function()
+    {
+		$('.menu-programa a').removeClass('activo');
+		
+		$(this).addClass('activo');
+		
+		$('.ocultar').hide();
+		
+		var enlace = $(this).attr('href');
+		//efecto 
+		$(enlace).fadeIn(1000);
+		 
+		return false;
+	})
+	
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
