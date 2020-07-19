@@ -2,24 +2,11 @@
  
  "use strict";
 
-	
 	 
   var regalo = document.getElementById('regalo');
  
   document.addEventListener('DOMContentLoaded',function()
 	{
-	/*
-	var map = L.map('mapa').setView([12.179762, 273.904181], 20);
-
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-
-	L.marker([12.179762, 273.904181]).addTo(map)
-		.bindPopup('GDLWebCamp.')
-		.openPopup();
-	  
-	 */	 
 	 //Datos Usuarios
 	 var nombre = document.getElementById('nombre');
 	 
@@ -198,10 +185,59 @@
  
  })();
 
+//Mapa
+$(function()
+  {
+  	var map = L.map('mapa').setView([12.179762, 273.904181], 20);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	L.marker([12.179762, 273.904181]).addTo(map)
+		.bindPopup('GDLWebCamp.')
+		.openPopup();
+  });
 
 
 $(function()
 {
+	//tipografia lettering
+	
+	$('.nombre-citio').lettering();
+	
+	//Menu fijo 
+	
+	var windoHeight = $(window).height();
+	var barraAltura = $('.barra').innerHeight();
+	
+	$(window).scroll(function()
+	{
+		var scroll = $(window).scrollTop();
+		
+		if(scroll > windoHeight)
+		{
+			$('.barra').addClass('fixed');
+			$('body').css({'margin-top' : barraAltura+'px'});
+		}else
+		{
+			$('.barra').removeClass('fixed');
+			
+			$('body').css({'margin-top' : '0px'});
+		}
+		
+	});
+	
+	//Menu Responsivo 
+	
+	$('.menu-movil').on('click',function()
+	{
+		//efecto de despliege 
+		$('.navegacion-principal').slideToggle();
+		
+	});
+	
+	
 	//programa de conferencia
 	$('div.ocultar').hide();
 	
@@ -222,8 +258,28 @@ $(function()
 		$(enlace).fadeIn(1000);
 		 
 		return false;
-	})
+	});
 	
+	//Animaciones para los numero 
+	
+	$('.resumen-evento li:nth-child(1) p').animateNumber({number:6},5000);
+	
+	$('.resumen-evento li:nth-child(2) p').animateNumber({number:15},5000);
+	
+	$('.resumen-evento li:nth-child(3) p').animateNumber({number:3},5000);
+	
+	$('.resumen-evento li:nth-child(4) p').animateNumber({number:9},5000);
+	
+	//Cuenta Regresiva
+	
+	$('.cuenta-regresiva').countdown('2020/12/10 09:00:00',function(e)
+	{
+		$('#dias').html(e.strftime('%D'));
+		$('#horas').html(e.strftime('%H'));
+		$('#minutos').html(e.strftime('%M'));
+		
+		$('#segundos').html(e.strftime('%S'));
+	});
 });
 
 
